@@ -1,5 +1,5 @@
 {
-  "name": "flamma_front",
+  "name": "gmg_front",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -12,14 +12,14 @@
   "homepage": "https://gitlab.com/guindytechnology1/yogivida_front#readme",
   "options": {
     "links_back": {
-      "dev": "flamma/public",
-      "prod": "flamma_back",
-      "test": "flamma_back_test"
+      "dev": "gmg/public",
+      "prod": "gmg_back",
+      "test": "gmg_back_test"
     },
     "links_front": {
-      "dev": "flamma_front/",
+      "dev": "gmg_front/",
       "prod": "/",
-      "test": "/flamma_front_test/"
+      "test": "/gmg_front_test/"
     },
     "port": 8000,
     "assetDirectory": "assets"

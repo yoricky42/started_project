@@ -108,7 +108,7 @@ gulp.task('watch', function(){
 
     gulp.watch('assets/css/sass/components/*.scss', gulp.series('sass'));
 
-    gulp.watch(['*.html', 'assets/js/*.js', 'assets/css/*.css', 'assets/css/sass/*.scss', 'assets/css/sass/components/*.scss']).on('change', browserSync.reload);
+    gulp.watch(['*.html','partials/*.html', 'assets/js/*.js', 'assets/css/*.css', 'assets/css/sass/*.scss', 'assets/css/sass/components/*.scss']).on('change', browserSync.reload);
 
     gulp.watch('assets/js/angular/*.js', gulp.series('compressDepsAngular'));
 

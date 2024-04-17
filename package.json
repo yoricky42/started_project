@@ -1,10 +1,10 @@
 {
-  "name": "gmg_front",
+  "name": "started_project",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp",
+    "tailwind": "npx tailwindcss -i ./assets/css/tailwindInput.css -o ./assets/css/tailwindOutput.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,13 +13,13 @@
   "options": {
     "links_back": {
       "dev": "gmg/public",
-      "prod": "gmg_back",
-      "test": "gmg_back_test"
+      "prod": "started_project",
+      "test": "started_project_test"
     },
     "links_front": {
-      "dev": "gmg_front/",
+      "dev": "started_project/",
       "prod": "/",
-      "test": "/gmg_front_test/"
+      "test": "/started_project/"
     },
     "port": 8000,
     "assetDirectory": "assets"
@@ -36,7 +36,8 @@
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-useref": "^5.0.0"
+    "gulp-useref": "^5.0.0",
+    "tailwindcss": "^3.4.3"
   },
   "dependencies": {
     "gulp-imagemin": "^8.0.0",

@@ -1,96 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<html lang="en" ng-app="started_project">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Started project</title>
+    <link rel="stylesheet" href="assets/css/tailwindOutput.css">
     <link rel="stylesheet" href="assets/css/base.min.css">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <ul class="nav nav-tabs-custum" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="home-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#home-tab-pane"
-          type="button"
-          role="tab"
-          aria-controls="home-tab-pane"
-          aria-selected="true"
-        >
-          Infos générales
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="profile-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#profile-tab-pane"
-          type="button"
-          role="tab"
-          aria-controls="profile-tab-pane"
-          aria-selected="false"
-        >
-          Demande
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="contact-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#contact-tab-pane"
-          type="button"
-          role="tab"
-          aria-controls="contact-tab-pane"
-          aria-selected="false"
-        >
-          Paiement
-        </button>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div
-        class="tab-pane fade show active"
-        id="home-tab-pane"
-        role="tabpanel"
-        aria-labelledby="home-tab"
-        tabindex="0"
-      >
-        ...
+</head>
+<body ng-controller="ProjectBackController">
+    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+        <img src="/img/beams.jpg" alt="" class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+        <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+        <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+          <div class="mx-auto max-w-md">
+            <h1 class="font-bold text-2xl"> <span class="text-4xl">Started</span> <span class="text-sky-500" >Project</span></h1>
+            <div class="divide-y divide-gray-300/50">
+              <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+                <p>Template d'un project simple en <strong>HTML</strong>, <strong>CSS {tailwind}</strong>, <strong>JavaScript</strong> et <strong>Angular Js</strong></p>
+                <p>Étapes à suivre pour lancer le projet : </p>
+                <ul class="space-y-4">
+                  <li class="flex items-start ">
+                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="11" />
+                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                    </svg>
+                    <p class="ml-4">
+                      Changer le nom par défaut du projet
+                      <code class="text-sm font-bold text-gray-900">"started_project"</code> en faisant une recherche globale sur votre éditeur de code et en le remplacant par le nom de votre projet.
+                    </p>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="11" />
+                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                    </svg>
+                    <p class="ml-4">
+                      Assurer vous d'avoir lancer votre logiciel de serveur local 
+                      <code class="text-sm font-bold text-gray-900">(wamp, mampp, xampp...).</code>
+                    </p>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="11" />
+                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                    </svg>
+                    <p class="ml-4">
+                      Lancer les commandes 
+                      <code class="text-sm font-bold text-gray-900">npm run tailwind</code> pour démarer tailwind et <code class="text-sm font-bold text-gray-900">gulp</code> pour lancer le serveur.
+                    </p>
+                  </li>
+                  
+                  <li class="flex items-center">
+                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-green-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="11" />
+                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                    </svg>
+                    <p class="ml-4">Vous êtes prêt à coder</p>
+                  </li>
+                </ul>
+                <p>Configuration de base :</p>
+                <ul class="space-y-4 italic">
+                    <li>
+                        - Nom de l'application angular : ng-app="<strong>started_project</strong>"
+                    </li>
+                    <li>
+                        - Nom du controller angular : ng-controller="<strong>ProjectBackController</strong>"
+                    </li>
+                    <li>
+                        - URL de base : <strong id="url_de_base"></strong>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div
-        class="tab-pane fade"
-        id="profile-tab-pane"
-        role="tabpanel"
-        aria-labelledby="profile-tab"
-        tabindex="0"
-      >
-        ...
-      </div>
-      <div
-        class="tab-pane fade"
-        id="contact-tab-pane"
-        role="tabpanel"
-        aria-labelledby="contact-tab"
-        tabindex="0"
-      >
-        ...
-      </div>
-    </div>
-  </body>
+</body>
+<script src="assets/js/angular/angular-dependancies.min.js"></script>
+<script src="assets/js/angular/BACKOFFICE.js"></script>
+<script src="assets/js/main-js/main.min.js"></script>
 </html>

@@ -1,17 +1,14 @@
-import { Inter } from "next/font/google";
-import "../../public/assets/css/base.css"
+import Header from "./Header";
+import Footer from "./Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Bienvenu chez Nahyel",
-  description: "Nahyel est un site...",
-};
-
-export default function ({ children }) {
+export default function RootLayout({ children })  {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >
+        <Header></Header>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }

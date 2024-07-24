@@ -1,0 +1,209 @@
+.Carrousel_3D_container {
+    width: 100%;
+    aspect-ratio: 16 / 6;
+    position: relative;
+    outline: none;
+    @include centerAll;
+    user-select: none;
+    overflow: hidden;
+
+    @include mQry(900px) {
+        margin: 0;
+        margin-bottom: 2em;
+    }
+
+    @include mQry($firstbreakpointMOBILE) {
+        margin: 0;
+        margin-bottom: 2em;
+        aspect-ratio: 16 / 10;
+    }
+
+    .over_lay_whithe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .Carrousel_3D {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+            width: 62.5vw;
+            max-width: 900px;
+            height: 100%;
+            max-height: 600px !important;
+            object-fit: contain !important;
+            object-position: top;
+
+            @include mQry($firstbreakpointMOBILE) {
+                object-fit: cover !important;
+            }
+        }
+
+        @include mQry(900px) {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .css-1fzpoyk {
+                width: 100% !important;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .arrows {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        @include centerInline;
+
+        @include mQry($firstbreakpointMOBILE) {
+            .arrow_arrow {
+                width: 25px;
+                height: 25px;
+                border: 1px solid #ffffff;
+                opacity: .7;
+
+                &:hover {
+                    background-color: #ffffff62;
+                }
+
+                svg {
+                    stroke: #ffffff;
+                    stroke-width: 1.5px;
+                    width: 35px;
+                }
+            }
+        }
+
+
+    }
+}
+
+$primaryColor: #CC9B6A;
+
+.arrow_arrow {
+    position: relative;
+    background: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $primaryColor;
+    @include centerAll();
+    transition: .3s;
+    cursor: pointer;
+
+    @include mQry($firstbreakpointMOBILE) {
+        width: 45px;
+        height: 45px;
+        border: 2px solid $primaryColor;
+    }
+
+    &[desabled="true"] {
+        opacity: .6;
+        pointer-events: none;
+    }
+
+    &.splide__arrow--prev {
+        left: 0 !important;
+    }
+
+    &.splide__arrow--next {
+        right: 0 !important;
+    }
+
+    svg {
+        stroke: $primaryColor;
+        stroke-width: 1.5px;
+        width: 25px;
+    }
+
+    &:hover {
+        background: $primaryColor;
+
+        svg {
+            stroke: #fff;
+        }
+    }
+
+    &.arrowLeft {
+        transform: rotate(180deg);
+    }
+}
+
+.Carrousel_3D_custom_container {
+    width: 100%;
+    height: 70vh;
+    margin: 2em 0;
+    position: relative;
+    outline: none;
+    @include centerAll;
+    user-select: none;
+
+    .is-visible{
+        opacity: 1 !important;
+        scale: 1.2;
+        z-index: 1;
+    }
+    .is-next,.is-prev{
+        opacity: .5;
+        transition: .3s;
+    }
+
+    .Carrousel_3D_custom{
+        width: 80%;
+        height: 100%;
+    
+        img {
+            width: 100%;
+            max-width: 900px;
+            height: 100%;
+            max-height: 600px !important;
+            object-fit: contain !important;
+    
+            @include mQry($firstbreakpointMOBILE) {
+                object-fit: cover !important;
+            }
+        }
+    
+        @include mQry(900px) {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+    
+            .css-1fzpoyk {
+                width: 100% !important;
+            }
+    
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .splide__arrow {
+            background: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            @include centerAll();
+            transition: .3s;
+            cursor: pointer;
+        }
+    }
+}

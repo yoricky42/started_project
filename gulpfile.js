@@ -68,6 +68,8 @@ gulp.task('compress', () => {
     return gulp.src(
         [
             options.assets.dist +'/js/jquery.min.js',
+            options.assets.dist +'/js/OwlCarousel/dist/owl.carousel.min.js',
+            options.assets.dist +'/js/custom.js',
         ]
     )
         .pipe(concat('main.js'))

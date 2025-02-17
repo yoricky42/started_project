@@ -34,7 +34,6 @@ $mobile_400 : 400px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    
 }
 
 @mixin centerEnd {
@@ -47,4 +46,9 @@ $mobile_400 : 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.lolign{
+    display: block;
+    background-color: red;
 }
